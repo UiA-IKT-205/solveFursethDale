@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var timer:CountDownTimer
     lateinit var startButton:Button
-    lateinit var coutdownDisplay:TextView
+    lateinit var countdownDisplay:TextView
 
     val timeToCountDownInMs = 5000L
     val timeTicks = 1000L
@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
        startButton.setOnClickListener(){
            startCountDown(it)
        }
-       coutdownDisplay = findViewById<TextView>(R.id.countDownView)
+       countdownDisplay = findViewById<TextView>(R.id.countDownView)
 
     }
 
@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun updateCountDownDisplay(timeInMs:Long){
-        coutdownDisplay.text = millisecondsToDescriptiveTime(timeInMs)
+        countdownDisplay.text = millisecondsToDescriptiveTime(timeInMs)
     }
 
 }
